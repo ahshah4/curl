@@ -3142,7 +3142,7 @@ static CURLcode ftp_done(struct connectdata *conn, CURLcode status,
   int ftpcode;
   CURLcode result = CURLE_OK;
   char *path = NULL;
-
+const char *path_to_use = ftp->path;
   if(!ftp)
     return CURLE_OK;
 
